@@ -3,61 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio capstone</title>
+    <meta name="description" content="Boluwatife is a UI Designer & Frontend Developer. I design interfaces and write the code to build them.">
+    <meta name="author" content="Boluwatife Jakobe">
+    <meta name="robots" content="index, follow">
+    
+    <title>Boluwatife - UI/UX Designer & Frontend Engineer</title>
+    
+    <link rel="canonical" href="https://bolujxl.com/">
+    <link rel="icon" href="imgs/myfavicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="imgs/myfavicon.svg" type="image/svg+xml">
+    
+    <meta property="og:title" content="Boluwatife - UI Designer & Frontend Developer">
+    <meta property="og:description" content="I design interfaces and write the code to build them.">
+    <meta property="og:type" content="website">
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_outward" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="icon" href="imgs/logo.ico" type="image/x-icon">
-    <link rel="icon" href="imgs/logo.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="style-responsive.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header class="header"> 
 
-        <nav class="nav-bar">
-            <div class="logo">
-                <a href="index.html">Bolu-Jxl</a>
-            </div> 
-            <div class="nav-links">
-                 <a href="#about-me">About Me</a>
-                <a href="#projects">Projects</a>
-            </div>
+        <nav class="nav-bar" aria-label="Main navigation">
+            <a href="index.html" class="nav-brand" aria-label="Home">
+                <img src="imgs/biomimg.png" alt="Boluwatife" class="nav-avatar">
+                <span class="nav-status-dot"></span>
+            </a>
+            <ul class="nav-links">
+                 <a href="bio.html">bio</a>
+                 <a href="works.html">my work</a>
+                 <a href="#contact">reach me</a>
+            </ul>
         </nav>
         
     </header>
 
-    <section class="hero">
+    <main id="main-content">
+    <section class="hero" aria-label="Introduction">
         <div class="hero-text">
-
-            <div class="hero-img"><img src="imgs/portrait.png" alt="Bolu-Jxl"></div>
             <h1>
-                Hi! I'm <span class="text-display"> Boluwatife Lawal</span>,<br> 
-                a <span class="text-display"> UI/UX Engineer</span> & <span class="text-display">No-Code Developer, </span> <br> and I live for exceptional user experiences.
+                Hi, I'm Boluwatife — I design interfaces and write the code to build them.
             </h1>
 
             
 
-            <button class="hero-btn" title="Contact Me">
-                Contact Me
-            </button>
+            <a class="hero-btn" title="Contact Me" data-cal-link="bolujxl/30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                Book a call
+            </a>
 
             
         </div>
 
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="projects-heading">
 
-            <div class="sub-head">
-                <div class="bullet-box">
-                    <!-- <img src="imgs/bullet.svg" alt="bullet-tag"> -->
-                </div>
-                
-                <span>{Recent projects}</span>
-            </div>
-
             <h2 class="main-head">
-                Showcasing creative solutions across product and web.
+                my selected projects.
             </h2>
 
             
@@ -66,203 +72,114 @@
 
         <div class="projects-grid">
 
-            <div class="project-card">
-                <div class="thumbnail">
-
-                    <div class="thumb-frame">
-
-                        <img src="imgs/thumbnail frame.png" alt="thumbnail-frame">
-
+            <article class="project-card">
+                <a href="#" class="project-card-link" aria-label="View ACME Landing page project">
+                    <div class="thumbnail">
+                        <img src="imgs/acme mockup.png" alt="ACME landing page design mockup showing a modern landing page with hero section" width="600" height="375">
                     </div>
-                    
 
-                    <div class="mockup-fr">
+                    <div class="project-title">
+                        <h2>
+                            Acme Landing page 
 
-                        <img src="imgs/acme mockup.png" alt="website-mockup">
+                            <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
 
+                        </h2>
+
+                        <p class="desc">Built a conversion-focused landing page for a consultancy firm.</p>
                     </div>
-                    
-                </div>
+                </a>
+            </article>
 
-                <div class="project-title">
-                    <h2>
-                        Acme Consultancy website
-
-                        <span class="material-symbols-outlined">arrow_outward</span>
-
-                    </h2>
-
-                    <p class="desc">Website for modern consultancy expertise.</p>
-                </div>
-
-
-
-            </div>
-
-            <div class="project-card">
-                <div class="thumbnail">
-
-                    <div class="thumb-frame">
-
-                        <img src="imgs/thumbnail frame.png" alt="thumbnail-frame">
-
+            <article class="project-card">
+                <a href="#" class="project-card-link" aria-label="View PillBox Case Study project">
+                    <div class="thumbnail">
+                        <img src="imgs/pillbox mockup.png" alt="PillBox pharmacy e-commerce store interface showing product catalog and shopping features" width="600" height="375">
                     </div>
-                    
 
-                    <div class="mockup-fr">
+                    <div class="project-title">
+                        <h2>
+                            PillBox Case Study
 
-                        <img src="imgs/pillbox mockup.png" alt="website-mockup">
+                            <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
 
+                        </h2>
+
+                        <p class="desc">Designed a medication tracking app to simplify daily health routines.</p>
                     </div>
-                    
-                </div>
+                </a>
+            </article>
 
-                <div class="project-title">
-                    <h2>
-                        Pillbox App 
-
-                        <span class="material-symbols-outlined">arrow_outward</span>
-
-                    </h2>
-
-                    <p class="desc">An intuitive mobile app for managing medications.</p>
-                </div>
-
-
-
-            </div>
-
-            <div class="project-card">
-                <div class="thumbnail">
-
-                    <div class="thumb-frame">
-
-                        <img src="imgs/thumbnail frame.png" alt="thumbnail-frame">
-
+            <article class="project-card">
+                <a href="#" class="project-card-link" aria-label="View Axtract Product Website project">
+                    <div class="thumbnail">
+                        <img src="imgs/axtract mockup.png" alt="Axtract product website showing community management features and modern UI" width="600" height="375">
                     </div>
-                    
 
-                    <div class="mockup-fr">
+                    <div class="project-title">
+                        <h2>
+                            Axtract Product Website
 
-                        <img src="imgs/axtract mockup.png" alt="website-mockup">
+                            <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
 
+                        </h2>
+
+                        <p class="desc">Landing page for a community platform focused on real engagement.</p>
                     </div>
+                </a>
+            </article>
+
+            <article class="project-card">
+                <a href="#" class="project-card-link" aria-label="View Prexer brand and website project">
+                    <div class="thumbnail">
+
+                        <img src="imgs/prexer mockup.png" alt="Prexer brand website for creative agencies showing portfolio and case study pages" width="600" height="375">
                     
-                </div>
-
-                <div class="project-title">
-                    <h2>
-                        Axtract Product Website
-
-                        <span class="material-symbols-outlined">arrow_outward</span>
-
-                    </h2>
-
-                    <p class="desc">Proposed system for modern communities.</p>
-                </div>
-
-
-
-            </div>
-
-            <div class="project-card">
-                <div class="thumbnail">
-
-                    <div class="thumb-frame">
-
-                        <img src="imgs/thumbnail frame.png" alt="thumbnail-frame">
-
                     </div>
-                    
 
-                    <div class="mockup-fr">
+                    <div class="project-title">
+                        <h2>
+                            Prexer brand & website 
 
-                        <img src="imgs/prexer mockup.png" alt="website-mockup">
+                            <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
 
+                        </h2>
+
+                        <p class="desc">Brand identity and landing page for a creative agency.</p>
                     </div>
+                </a>
+            </article>
+
+            <article class="project-card">
+                <a href="#" class="project-card-link" aria-label="View DataCelot Solutions website project">
+                    <div class="thumbnail">
+
+                        <img src="imgs/datatcelot mockup.png" alt="DataCelot consultancy website with data analytics dashboards and service pages" width="600" height="375">
                     
-                </div>
-
-                <div class="project-title">
-                    <h2>
-                        Prexer brand & website 
-
-                        <span class="material-symbols-outlined">arrow_outward</span>
-
-                    </h2>
-
-                    <p class="desc">A modern web experience for creative agencies.</p>
-                </div>
-
-
-
-            </div>
-
-            <div class="project-card">
-                <div class="thumbnail">
-
-                    <div class="thumb-frame">
-
-                        <img src="imgs/thumbnail frame.png" alt="thumbnail-frame">
-
                     </div>
-                    
 
-                    <div class="mockup-fr">
+                    <div class="project-title">
+                        <h2>
+                            DataCelot Solutions website 
 
-                        <img src="imgs/datatcelot mockup.png" alt="website-mockup">
+                            <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
 
+                        </h2>
+
+                        <p class="desc">Company website for a data-driven consultancy firm.</p>
                     </div>
-                    
-                </div>
-
-                <div class="project-title">
-                    <h2>
-                        DataCelot Solutions website 
-
-                        <span class="material-symbols-outlined">arrow_outward</span>
-
-                    </h2>
-
-                    <p class="desc">Website concept for data-based consultancy.</p>
-                </div>
-
-
-
-            </div>
+                </a>
+            </article>
 
             <div class="project-card-vm">
-                <div class="thumbnail">
-
-                    <div class="thumb-vm">
-
-                        <img src="imgs/thumbnail view more.png" alt="thumbnail-frame">
-
+                <a href="works.html" class="vm-fr-link" style="text-decoration: none; color: inherit;">
+                    <div class="thumbnail">
+                        <div class="vm-fr" role="button" tabindex="0">
+                            <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+                            View more Projects
+                        </div>
                     </div>
-                    
-
-                    <div class="vm-fr">
-
-                        <span class="material-symbols-outlined">arrow_outward</span>
-                        View more Projects
-
-                    </div>
-                    
-                </div>
-
-                <div class="project-title">
-                    <h2>
-                        null
-
-                        <span class="material-symbols-outlined">arrow_outward</span>
-
-                    </h2>
-
-                    <p class="desc">null.</p>
-                </div> 
-
-
-
+                </a>
             </div>
 
            
@@ -270,192 +187,62 @@
 
     </section>
 
-    <section class="services">
-
-         <div class="services-heading">
-
-            <div class="sub-head">
-                <div class="bullet-box">
-                    <!-- <img src="imgs/bullet.svg" alt="bullet-tag"> -->
-                </div>
-                
-                <span>{Services}</span>
-            </div>
-
-            <h2 class="main-head-light">
-               What I Offer to Brands and Businesses.
-            </h2>
-
-            
-            
-        </div>
-
-        <div class="services-grid">
-            <div class="service-fr">
-                <div class="head-text-icon">
-                    <div class="icon-box">
-                        <img src="imgs/Code off.svg" alt="">
-
-                    </div>
-
-                    <p>No-Code Development</p>
-
-                </div>
-
-                <div class="text-desc">
-                    Quickly launch websites and apps with no-code tools, reducing complexity while saving time.
-                </div>
-
-            </div>
-
-            <div class="service-fr">
-                <div class="head-text-icon">
-                    <div class="icon-box">
-                        <img class="ux-icon" src="imgs/UX ICON.svg" alt="">
-
-                    </div>
-
-                    <p>Digital Product Design</p>
-
-                </div>
-
-                <div class="text-desc">
-                    Craft exceptional digital experiences. Turn your vision into a remarkable product, effortlessly.
-                </div>
-
-            </div>
-
-            <div class="service-fr">
-                <div class="head-text-icon">
-                    <div class="icon-box">
-                        <img src="imgs/adaptive.svg" alt="">
-
-                    </div>
-
-                    <p>Adaptive Web Design</p>
-
-                </div>
-
-                <div class="text-desc">
-                    Ensure your website looks great and functions seamlessly across devices and screen sizes.
-                </div>
-
-            </div>
-
-            <div class="service-fr">
-                <div class="head-text-icon">
-                    <div class="icon-box">
-                        <img src="imgs/square code.svg" alt="">
-
-                    </div>
-
-                    <p>Frontend Development</p>
-
-                </div>
-
-                <div class="text-desc">
-                   Build fast, scalable, and beautiful interfaces that bring designs to life with clean, modern code.
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="aboutme">
-
-        <div class="aboutme-heading">
-
-            <div class="sub-head">
-                <div class="bullet-box">
-                    
-                </div>
-                
-                <span>{About me}</span>
-            </div>
-
-            <h2 class="main-head">
-                Who I Am and How I Got Here.
-            </h2>
-
-            
-            
-        </div>
-
-        <div class="about-blocks">
-            <p>I’m a UI/UX Engineer and No-Code Developer with nearly three years of freelance experience — turning ideas into digital products that feel simple and human. My journey began designing flyers and mobile visuals in college, where I discovered how design can shape connection. That curiosity grew into a focus on product thinking, refined through self-learning, UX courses, and hands-on projects that built my foundation in creating meaningful user experiences.
-
-                <br><br>
-
-            Over time, I’ve worked across industries like community management, cloud computing, and data analytics — bridging design and development to deliver scalable, purposeful solutions. My process is grounded in research, clarity, and collaboration, helping businesses translate complex ideas into intuitive design outcomes. Outside of work, I draw inspiration from music and technology — both remind me that creativity and structure can harmonize beautifully.</p>
-        </div>
-
-    </section>
-
-    <section class="collab">
+<section class="collab" id="contact">
         <div class="collab-heading">
-            <!-- <div class="sub-head">
-                <div class="bullet-box">
-                    
-                </div>
-                
-                <span>{Collaboration}</span>
-            </div> -->
-
             <h2 class="main-head-light">
-                Do you have a project in mind? Let’s make it real.
+               reach out, let’s make magic.
             </h2>
+
+            <p>A new product or a website? I'd love to hear about it.</p>
             
         </div>
 
         <div class="collab-socials">
 
             <div class="collabtext-btn">
-                <p>I design digital products that can strengthen brands. Whether it’s design, or build, I'd love to bring your idea to life.</p>
 
-                 <button class="collab-btn" title="Contact Me">
-                Book a Call
-                </button>
+                <a class="hero-btn" title="Contact Me" data-cal-link="bolujxl/30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                    Book a call
+                </a>
                     
             </div>
 
             <div class="socials">
                 <div class="sm-icons">
-                    <a class="sm-icon" href="#">
-                        <img src="imgs/ig.svg" alt="instagram">
+
+                    <a class="sm-icon" href="https://github.com/Bolujxl" target="_blank" rel="noopener noreferrer" aria-label="Check my code on GitHub">
+                        <img src="imgs/collaborate/github.svg" alt="GitHub">
                     </a>
 
-                    <a class="sm-icon" href="#">
-                        <img src="imgs/medium.svg" alt="medium">
+                    <a class="sm-icon" href="https://www.behance.net/boluJxl" target="_blank" rel="noopener noreferrer" aria-label="View my work on Behance">
+                        <img src="imgs/collaborate/mage_behance.svg" alt="Behance">
+                    </a>       
+
+                    <a class="sm-icon" href="https://x.com/Bolujxl" target="_blank" rel="noopener noreferrer" aria-label="Follow me on X (Twitter)">
+                        <img src="imgs/collaborate/xcom.svg" alt="X">
                     </a>
 
-                    <a class="sm-icon" href="#">
-                        <img src="imgs/collaborate/mage_behance.svg" alt="behance">
-                    </a>
-
-                    <a class="sm-icon" href="#">
-                        <img src="imgs/collaborate/github.svg" alt="github">
-                    </a>
-
-                    <a class="sm-icon" href="#">
-                        <img src="imgs/collaborate/xcom.svg" alt="xcom">
+                    <a class="sm-icon" href="https://medium.com/@bolulawal99" target="_blank" rel="noopener noreferrer" aria-label="Read my articles on Medium">
+                        <img src="imgs/medium.svg" alt="Medium">
                     </a>
                 </div>
 
                
-                <p>or email me at <a href="mailto:hello@bolujxl.com" class="email-link">hello@bolujxl.com</a></p>
+                <p>or you can <a href="mailto:bolujxl2@gmail.com" class="email-link">send me an email</a></p>
 
             </div>
 
         </div>
     </section>
+    </main>
 
     <footer class="footer">
-        <p class="footer-logo">Bolu-Jxl</p>
-        <p class="footer-copy">© 2025 Boluwatife Jakobe. All rights reserved.</p>
-        <p class="footer-create">Created  by Boluwatife Lawal</p>
+        <p class="footer-create">Pixels pushed by Boluwatife</p>
+        <p class="footer-copy">&copy; BoluJxl <span id="year"></span></p>
     </footer>
+    
+    <div class="cursor-dot"></div>
+    <script src="script.js"></script>
     
 </body>
 </html>

@@ -1,0 +1,99 @@
+
+
+.creative-stack {
+    padding: var(--sectionPadding);
+    background-color: var(--surface-dark-50);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sectionGap);
+    align-items: center;
+    width: 100%;
+}
+
+.creative-heading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space4);
+    align-items: center;
+    width: 90%;
+    margin-bottom: var(--space2);
+    text-align: center;
+}
+
+.tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space16);
+    justify-content: center;
+    width: 90%; /* Center container */
+}
+
+.tool-card {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center icon/text inside card */
+    gap: var(--space16);
+    padding: 1rem 1.5rem; /* 1rem top/bottom, 1.5rem left/right */
+    flex: 1 1 200px; /* Uniform width - grows to fill row, base of 200px */
+    max-width: 250px; /* Prevent them from getting too wide on large rows */
+    background-color: var(--surface-dark-100);
+    border: 2px solid rgba(255, 255, 255, 0.08); /* Subtle stroke */
+    border-radius: var(--space12); /* Slightly larger radius */
+    color: var(--whiteText-color);
+    font-size: var(--font18); /* Bigger font */
+    font-weight: var(--fontMedium);
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-.5px);
+    background-color: var(--surface-dark-10); /* Slightly lighter on hover */
+    border-color: rgba(255, 255, 255, 0.2); /* Stroke pops slightly */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.tool-icon {
+    width: 28px; /* Bigger icon */
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tool-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Tablet & Desktop Adjustments */
+@media (min-width: 768px) {
+    .creative-heading, .tools-list {
+        width: 80%; /* Reduced width per user request */
+    }
+    
+    .tools-list {
+        gap: var(--space24);
+    }
+    
+    .tool-card {
+        padding: 1.25rem 2rem; /* Scaled padding for desktop */
+        font-size: var(--font20);
+        border-radius: var(--space16);
+        flex: 0 1 220px; /* More rigid sizing on desktop */
+    }
+    
+    .tool-icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (min-width: 1199px) {
+    .creative-stack {
+        padding: 5rem 7rem;
+    }
+    .creative-heading, .tools-list {
+        width: 70%; /* Very tight grid on large screens */
+    }
+}
