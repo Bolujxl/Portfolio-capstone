@@ -1,14 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    const heroHeading = document.querySelector('.hero-text h1');
+    if (heroHeading) {
+        const fullText = heroHeading.textContent.trim();
+        const textSpan = document.createElement('span');
+        const cursorSpan = document.createElement('span');
+
+        heroHeading.textContent = '';
+        cursorSpan.className = 'typing-cursor';
+
+        heroHeading.appendChild(textSpan);
+        heroHeading.appendChild(cursorSpan);
+
+        let i = 0;
+        const interval = setInterval(() => {
+            if (i < fullText.length) {
+                textSpan.textContent += fullText[i];
+                i++;
+            } else {
+                clearInterval(interval);
+                cursorSpan.remove();
+            }
+        }, 30);
+    }
+
+    
     const customSmoothScroll = (targetId) => {
         const targetElement = document.querySelector(targetId);
         if (!targetElement) return;
 
         const headerOffset = 80;
         const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        const offsetPosition = elementPosition + window.scrollY - headerOffset;
         
-        const startPosition = window.pageYOffset;
+        const startPosition = window.scrollY;
         const distance = offsetPosition - startPosition;
         const duration = 1200;
         let startTime = null;
@@ -75,55 +100,57 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.style.setProperty('--transition-normal', '0s');
     }
 
+    if (!prefersReducedMotion.matches) {
+        const staggerChildren = (parentSelector, childSelector, staggerMs = 60) => {
+            document.querySelectorAll(parentSelector).forEach(parent => {
+                parent.querySelectorAll(childSelector).forEach((child, i) => {
+                    child.classList.add('reveal');
+                    child.style.transitionDelay = `${i * staggerMs}ms`;
+                });
+            });
+        };
+
+        const soloReveal = (selector) => {
+            document.querySelectorAll(selector).forEach(el => el.classList.add('reveal'));
+        };
+
+        soloReveal('.projects-heading, .collab-heading, .bio-heading, .creative-heading, .experience-heading, .writing-heading');
+        soloReveal('.bio-avatar, .bio-content');
+        soloReveal('.collabtext-btn, .socials');
+
+        staggerChildren('.projects-grid', '.project-card, .project-card-vm', 100);
+        staggerChildren('.experience-list', '.exp-item', 100);
+        staggerChildren('.writing-grid', '.writing-card', 120);
+        staggerChildren('.tools-list', '.tool-card', 80);
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            root: null,
+            rootMargin: '0px 0px -50px 0px',
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    }
+
     const yearElement = document.getElementById('year');
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
 
-    if ('loading' in HTMLImageElement.prototype) {
-        const images = document.querySelectorAll('img[loading="lazy"]');
-        images.forEach(img => {
-            img.src = img.dataset.src || img.src;
-        });
-    } else {
-        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-        
-        const loadImage = (image) => {
-            const src = image.dataset.src;
-            if (src) {
-                image.src = src;
-            }
-        };
-        
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    loadImage(entry.target);
-                    observer.unobserve(entry.target);
-                }
-            });
-        });
-        
-        lazyImages.forEach(image => imageObserver.observe(image));
-    }
-    
-    const vmCard = document.querySelector('.vm-fr');
-    if (vmCard) {
-        vmCard.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                console.log('View more clicked');
-            }
-        });
-    }
-
     const cursorDot = document.querySelector(".cursor-dot");
-    const offset = 12;
+    const offset = 10;
     let mouseX = 0;
     let mouseY = 0;
     let dotX = 0;
     let dotY = 0;
-    const speed = 0.15;
+    const speed = 0.3;
 
     if (cursorDot) {
         window.addEventListener("mousemove", (e) => {
@@ -145,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const hoverElements = document.querySelectorAll('a, button, .project-card, .thumbnail, .writing-card, .sm-icon');
         hoverElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
-                cursorDot.style.transform = 'scale(1.5)';
+                cursorDot.style.transform = 'scale(1.3)';
             });
             el.addEventListener('mouseleave', () => {
                 cursorDot.style.transform = 'scale(1)';
@@ -209,8 +236,3 @@ function checkWCAG(fg, bg, level = 'AA', size = 'normal') {
     return ratio >= minimum;
 }
 
-  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", "30min", {origin:"https://app.cal.com"});
-
-
-  Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});

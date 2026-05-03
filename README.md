@@ -1,1 +1,1 @@
-This is a demo of my prtfolio, just a one page demo. Final portfolio coming soon.
+a hardcoded html css js portfolio that finally left my computer and became live.

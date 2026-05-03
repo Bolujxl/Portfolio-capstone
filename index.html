@@ -3,22 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Boluwatife is a UI Designer & Frontend Developer. I design interfaces and write the code to build them.">
+    <meta name="description" content="Boluwatife is a Product Designer & Frontend Engineer. I design and build products where every interaction feels like someone cared.">
     <meta name="author" content="Boluwatife Jakobe">
     <meta name="robots" content="index, follow">
     
-    <title>Boluwatife - UI/UX Designer & Frontend Engineer</title>
+    <title>Boluwatife — Product Designer & Frontend Engineer</title>
     
     <link rel="canonical" href="https://bolujxl.com/">
-    <link rel="icon" href="imgs/myfavicon.svg" type="image/svg+xml">
-    <link rel="shortcut icon" href="imgs/myfavicon.svg" type="image/svg+xml">
+    <link rel="icon" href="imgs/biomimg.webp" type="image/webp">
+    <link rel="shortcut icon" href="imgs/biomimg.webp" type="image/webp">
     
-    <meta property="og:title" content="Boluwatife - UI Designer & Frontend Developer">
-    <meta property="og:description" content="I design interfaces and write the code to build them.">
+    <meta property="og:title" content="Boluwatife — Product Designer & Frontend Engineer">
+    <meta property="og:description" content="I design and build products where every interaction feels like someone cared.">
     <meta property="og:type" content="website">
-    
+    <meta property="og:image" content="https://bolujxl.com/imgs/biomimg.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://bolujxl.com/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Boluwatife Jakobe",
+      "givenName": "Boluwatife",
+      "url": "https://bolujxl.com/",
+      "image": "https://bolujxl.com/imgs/biomimg.webp",
+      "jobTitle": "Product Designer & Frontend Engineer",
+      "description": "Product designer and frontend engineer who builds products end to end — with unnecessary care for every detail.",
+      "sameAs": [
+        "https://github.com/Bolujxl",
+        "https://www.behance.net/boluJxl",
+        "https://x.com/Bolujxl",
+        "https://medium.com/@bolulawal99"
+      ],
+      "knowsAbout": [
+        "Product Design",
+        "UI/UX Design",
+        "Frontend Development",
+        "React",
+        "Figma",
+        "Webflow",
+        "Framer"
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_outward" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="colors.css">
     <link rel="stylesheet" href="style-responsive.css">
 </head>
@@ -29,13 +62,13 @@
 
         <nav class="nav-bar" aria-label="Main navigation">
             <a href="index.html" class="nav-brand" aria-label="Home">
-                <img src="imgs/biomimg.png" alt="Boluwatife" class="nav-avatar">
+                <img src="imgs/biomimg.webp" alt="Boluwatife" class="nav-avatar">
                 <span class="nav-status-dot"></span>
             </a>
             <ul class="nav-links">
-                 <a href="bio.html">bio</a>
-                 <a href="works.html">my work</a>
-                 <a href="#contact">reach me</a>
+                 <li><a href="bio.html">bio</a></li>
+                 <li><a href="works.html">my work</a></li>
+                 <li><a href="#contact">reach me</a></li>
             </ul>
         </nav>
         
@@ -43,18 +76,18 @@
 
     <main id="main-content">
     <section class="hero" aria-label="Introduction">
-        <div class="hero-text">
-            <h1>
-                Hi, I'm Boluwatife — I design interfaces and write the code to build them.
+    <div class="hero-text">
+            <div class="bio-avatar-home">
+                <img src="imgs/biomimg.webp" alt="Boluwatife">
+            </div>
+            <h1 aria-label="Hi, I'm Boluwatife. I design and build products where every interaction feels like someone cared.">
+                Hi, I'm Boluwatife. I design and build products where every interaction feels like someone cared.
             </h1>
 
-            
-
-            <a class="hero-btn" title="Contact Me" data-cal-link="bolujxl/30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+            <a href="https://cal.com/bolujxl/30min" class="hero-btn" title="Contact Me" data-cal-link="bolujxl/30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
                 Book a call
             </a>
 
-            
         </div>
 
     </section>
@@ -75,14 +108,14 @@
             <article class="project-card">
                 <a href="https://rsa-react.bolujxlstudio.com/" class="project-card-link" target="_blank" rel="noopener noreferrer" aria-label="View RSA Risk Management project">
                     <div class="thumbnail">
-                        <img src="imgs/rsa mockup.jpg" alt="RSA Risk Management platform landing page" width="600" height="375">
+                        <img src="imgs/rsa mockup.webp" alt="RSA Risk Management platform landing page" width="600" height="375" loading="lazy">
                     </div>
                     <div class="project-title">
                         <h2>
                             RSA Risk Management
                             <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
                         </h2>
-                        <p class="desc">Landing page for a risk management consultancy platform.</p>
+                        <p class="desc">React rebuild for a risk management consultancy — went from design to deploy solo, pitched as part of a brand overhaul.</p>
                     </div>
                 </a>
             </article>
@@ -90,14 +123,14 @@
             <article class="project-card">
                 <a href="https://visitia.bolujxlstudio.com/" class="project-card-link" target="_blank" rel="noopener noreferrer" aria-label="View Visitia Travel Agency project">
                     <div class="thumbnail">
-                        <img src="imgs/visitia mockup.jpg" alt="Visitia travel agency landing page showcasing destinations" width="600" height="375">
+                        <img src="imgs/visitia mockup.webp" alt="Visitia travel agency landing page showcasing destinations" width="600" height="375" loading="lazy">
                     </div>
                     <div class="project-title">
                         <h2>
                             Visitia Travel Agency
                             <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
                         </h2>
-                        <p class="desc">Travel agency landing page designed for discovery and bookings.</p>
+                        <p class="desc">Travel agency landing page built to generate and convert leads. HTML, CSS, and JS.</p>
                     </div>
                 </a>
             </article>
@@ -105,14 +138,14 @@
             <article class="project-card">
                 <a href="https://www.behance.net/gallery/179838149/Pillbox-Mobile-App-Design-Case-Study" class="project-card-link" target="_blank" rel="noopener noreferrer" aria-label="View PillBox Case Study project">
                     <div class="thumbnail">
-                        <img src="imgs/pillbox mockup.png" alt="PillBox medication tracking app interface" width="600" height="375">
+                        <img src="imgs/pillbox mockup.webp" alt="PillBox medication tracking app interface" width="600" height="375" loading="lazy">
                     </div>
                     <div class="project-title">
                         <h2>
                             PillBox Case Study
                             <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
                         </h2>
-                        <p class="desc">Designed a medication tracking app to simplify daily health routines.</p>
+                        <p class="desc">End-to-end UX case study — a medication tracker designed to help patients stay on top of their meds and connect with providers.</p>
                     </div>
                 </a>
             </article>
@@ -120,14 +153,14 @@
             <article class="project-card">
                 <a href="https://consultancy-website-final-version.vercel.app/" class="project-card-link" target="_blank" rel="noopener noreferrer" aria-label="View ACME Landing page project">
                     <div class="thumbnail">
-                        <img src="imgs/acme mockup.png" alt="ACME landing page design mockup" width="600" height="375">
+                        <img src="imgs/acme mockup.webp" alt="ACME landing page design mockup" width="600" height="375" loading="lazy">
                     </div>
                     <div class="project-title">
                         <h2>
                             Acme Landing page
                             <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
                         </h2>
-                        <p class="desc">Built a conversion-focused landing page for a consultancy firm.</p>
+                        <p class="desc">A consultancy landing page built to tell a founder's story online. HTML, CSS, and JS.</p>
                     </div>
                 </a>
             </article>
@@ -135,14 +168,14 @@
             <article class="project-card">
                 <a href="https://axract-app-website-demo-15cxp71oc-bolujxls-projects.vercel.app/" class="project-card-link" target="_blank" rel="noopener noreferrer" aria-label="View Axtract Product Website project">
                     <div class="thumbnail">
-                        <img src="imgs/axtract mockup.png" alt="Axtract product website interface" width="600" height="375">
+                        <img src="imgs/axtract mockup.webp" alt="Axtract product website interface" width="600" height="375" loading="lazy">
                     </div>
                     <div class="project-title">
                         <h2>
                             Axtract Product Website
                             <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
                         </h2>
-                        <p class="desc">Landing page for a community platform focused on real engagement.</p>
+                        <p class="desc">Product landing page for a community platform, with real estate and social use cases. HTML, CSS, and JS.</p>
                     </div>
                 </a>
             </article>
@@ -150,7 +183,7 @@
             <div class="project-card-vm">
                 <a href="works.html" class="vm-fr-link" style="text-decoration: none; color: inherit;">
                     <div class="thumbnail">
-                        <div class="vm-fr" role="button" tabindex="0">
+                        <div class="vm-fr">
                             <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
                             View more Projects
                         </div>
@@ -177,7 +210,7 @@
 
             <div class="collabtext-btn">
 
-                <a class="hero-btn" title="Contact Me" data-cal-link="bolujxl/30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                <a href="https://cal.com/bolujxl/30min" class="hero-btn" title="Contact Me" data-cal-link="bolujxl/30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
                     Book a call
                 </a>
                     
@@ -218,7 +251,8 @@
     </footer>
     
     <div class="cursor-dot"></div>
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="cal.js"></script>
     
 </body>
 </html>

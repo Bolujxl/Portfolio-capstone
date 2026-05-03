@@ -13,22 +13,23 @@
     overflow: hidden;
     margin-bottom: var(--space32);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-    transform: rotate(-2deg);
+    transform: rotate(0deg);
     border: 1px solid rgba(0, 0, 0, 0.05);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+
 @media (hover: hover) {
     .bio-avatar:hover {
-        transform: rotate(0deg) scale(1.08);
+        transform: rotate(-2deg) scale(1.08);
     }
 }
 
-.bio-avatar:active {
-    transform: rotate(0deg) scale(1.05);
+.bio-avatar:active{
+    transform: rotate(-2deg) scale(1.09);
 }
 
-.bio-avatar img {
+.bio-avatar img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -56,7 +57,7 @@
     line-height: 1.7;
     color: var(--lightSection-text-color);
     text-align: justify;
-    width: 100%;
+    padding: var(--space12);
 }
 
 .experience {
@@ -127,6 +128,43 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-top: var(--space4);
+}
+
+.resume-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space8);
+    width: fit-content;
+    padding: var(--space16) var(--space24);
+    font-size: 1rem;
+    letter-spacing: -0.2px;
+    color: var(--secondary-color);
+    border: none;
+    border-radius: var(--borderRadius2);
+    background-color: var(--primary-color);
+    font-weight: var(--fontSemiBold);
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: var(--space24);
+    align-self: center;
+}
+
+@media (hover: hover) {
+    .resume-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(77, 181, 255, 0.3);
+    }
+}
+
+.resume-link:active {
+    transform: translateY(0);
+}
+
+.resume-link span {
+    padding-top: .125rem;
+    font-size: 1.125rem;
+    line-height: 1;
 }
 
 .experience, .writing {
@@ -229,7 +267,13 @@
         width: 80%;
     }
     
-    .bio-content p {
+.bio-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space16);
+}
+
+.bio-content p {
         font-size: var(--font20);
         line-height: 1.8;
         text-align: justify;
