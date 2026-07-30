@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PillBox — an end-to-end UX case study. Redesigned with architectural layouts.">
+    <meta name="author" content="Boluwatife Jakobe">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Geminics Study — PillBox Redesign</title>
+
+    <link rel="icon" href="imgs/biomimg.webp" type="image/webp">
+    <link rel="shortcut icon" href="imgs/biomimg.webp" type="image/webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_outward" />
+
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="style-responsive.css">
+    <link rel="stylesheet" href="geminics.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav-bar" aria-label="Main navigation">
+            <a href="index.html" class="nav-brand" aria-label="Home">
+                <img src="imgs/biomimg.webp" alt="Boluwatife" class="nav-avatar">
+                <span class="nav-status-dot"></span>
+            </a>
+            <ul class="nav-links">
+                 <li><a href="bio.html">bio</a></li>
+                 <li><a href="works.html">my work</a></li>
+                 <li><a href="#contact">reach me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ── Hero ── -->
+        <section class="gm-hero">
+            <div class="gm-hero-container">
+                <div class="gm-hero-content">
+                    <h1 class="gm-hero-title">PillBox &mdash; Medication Tracking Companion</h1>
+                    <p class="gm-hero-strapline">Helping patients with chronic conditions stay on top of their meds without the anxiety of double-dosing.</p>
+                </div>
+
+                <div class="gm-hero-meta">
+                    <div class="gm-meta-item">
+                        <span class="gm-meta-label">Role</span>
+                        <span class="gm-meta-value">Product Designer</span>
+                    </div>
+                    <div class="gm-meta-item">
+                        <span class="gm-meta-label">Timeline</span>
+                        <span class="gm-meta-value">8 Weeks</span>
+                    </div>
+                    <div class="gm-meta-item">
+                        <span class="gm-meta-label">Industry</span>
+                        <span class="gm-meta-value">HealthTech</span>
+                    </div>
+                    <div class="gm-meta-item">
+                        <span class="gm-meta-label">Platform</span>
+                        <span class="gm-meta-value">iOS & Android</span>
+                    </div>
+                </div>
+
+                <div class="gm-hero-visual">
+                    <img src="imgs/pillbox mockup.webp" alt="PillBox medication tracking app interface">
+                </div>
+            </div>
+        </section>
+
+        <!-- ── The Problem (Dark) ── -->
+        <section class="cs-section dark">
+            <div class="cs-section-container">
+                <div class="cs-section-heading">
+                    <h2>the problem.</h2>
+                </div>
+                <p class="cs-body">
+                    Medication non-adherence affects over 50% of patients with chronic conditions. People forget doses, mix up prescriptions, or stop taking meds when side effects kick in &mdash; and the consequences range from prolonged illness to preventable hospital visits. Most existing apps are either too clinical, too complex, or built for caregivers rather than the patients themselves.
+                </p>
+                <div class="cs-insight">
+                    Patients don&rsquo;t need another complex health tool. They need something that feels less like a chore and more like a companion.
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Research (Light) ── -->
+        <section class="cs-section light">
+            <div class="cs-section-container">
+                <div class="cs-section-heading">
+                    <h2>research &amp; discovery.</h2>
+                </div>
+                <p class="cs-body">
+                    I started with a mixed-methods approach: 12 user interviews with patients managing 2+ prescriptions, a competitive audit of 6 medication apps, and a survey with 50+ respondents. Three patterns stood out immediately.
+                </p>
+                <div class="gm-steps-grid">
+                    <div class="gm-step-card">
+                        <h3>Forgetting isn&rsquo;t the root cause</h3>
+                        <p>Patients remembered to take their meds &mdash; they forgot <em>whether</em> they had already taken them. Double-dosing anxiety was the top concern across every interview.</p>
+                    </div>
+                    <div class="gm-step-card">
+                        <h3>Pill fatigue is real</h3>
+                        <p>Users with 5+ daily prescriptions described feeling overwhelmed by the sheer volume. Visual pill identification and schedule chunking were consistently requested.</p>
+                    </div>
+                    <div class="gm-step-card">
+                        <h3>Connection to providers is broken</h3>
+                        <p>When side effects occurred, patients wanted to reach their doctor &mdash; but the path was always indirect. A built-in feedback loop was a clear opportunity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Process (Dark) ── -->
+        <section class="cs-section dark">
+            <div class="cs-section-container">
+                <div class="cs-section-heading">
+                    <h2>design process.</h2>
+                </div>
+                <p class="cs-body">
+                    With research insights in hand, I moved into wireframing and iterative prototyping. The core challenge was balancing simplicity with the depth needed for medication management. I explored three directions before converging on a card-based dashboard that surfaces the most time-sensitive action first.
+                </p>
+                <div class="gm-gallery-mosaic">
+                    <div class="gm-gallery-item wide">
+                        <img src="imgs/pillbox mockup.webp" alt="PillBox wireframes">
+                    </div>
+                    <div class="gm-gallery-item">
+                        <img src="imgs/pillbox mockup.webp" alt="PillBox sketches">
+                    </div>
+                    <div class="gm-gallery-item">
+                        <img src="imgs/pillbox mockup.webp" alt="PillBox prototype">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Solution (Light) ── -->
+        <section class="cs-section light">
+            <div class="cs-section-container wide">
+                <div class="cs-section-heading">
+                    <h2>the solution.</h2>
+                </div>
+                <div class="gm-solution-showcase">
+                    <div class="gm-showcase-item">
+                        <div class="gm-showcase-img">
+                            <img src="imgs/pillbox mockup.webp" alt="Today View">
+                        </div>
+                        <div class="gm-showcase-text">
+                            <h3>Today View</h3>
+                            <p>A focused dashboard showing only what&rsquo;s relevant right now, reducing double-dosing anxiety.</p>
+                        </div>
+                    </div>
+                    <div class="gm-showcase-item reverse">
+                        <div class="gm-showcase-img">
+                            <img src="imgs/pillbox mockup.webp" alt="Pill Identity">
+                        </div>
+                        <div class="gm-showcase-text">
+                            <h3>Pill Recognition</h3>
+                            <p>Visual identification cards that help patients confirm they are taking the correct medication.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Outcome (Dark) ── -->
+        <section class="cs-section dark">
+            <div class="cs-section-container">
+                <div class="cs-section-heading">
+                    <h2>outcome.</h2>
+                </div>
+                <div class="gm-metrics-strip">
+                    <div class="gm-metric">
+                        <span class="gm-metric-val">94%</span>
+                        <span class="gm-metric-lab">Task Completion</span>
+                    </div>
+                    <div class="gm-metric">
+                        <span class="gm-metric-val">4.8s</span>
+                        <span class="gm-metric-lab">Average Log Time</span>
+                    </div>
+                    <div class="gm-metric">
+                        <span class="gm-metric-val">8/10</span>
+                        <span class="gm-metric-lab">SUS Score</span>
+                    </div>
+                </div>
+                
+                <div class="gm-final-cta">
+                    <a href="https://www.behance.net/gallery/179838149/Pillbox-Mobile-App-Design-Case-Study" class="cs-cta" target="_blank">
+                        View full case study on Behance
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Navigation ── -->
+        <nav class="cs-next">
+            <div class="cs-next-container">
+                <a href="works.html" class="cs-next-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    Back to projects
+                </a>
+                <a href="works.html" class="cs-back">All Projects</a>
+                <a href="#" class="cs-next-link">
+                    Next project
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+        </nav>
+
+        <!-- ── Contact ── -->
+        <section class="collab" id="contact">
+            <div class="collab-heading">
+                <h2 class="main-head-light">reach out, let&rsquo;s make magic.</h2>
+                <p>A new product or a website? I'd love to hear about it.</p>
+            </div>
+            <div class="collab-socials">
+                <div class="collabtext-btn">
+                    <a href="https://cal.com/bolujxl/30min" class="hero-btn" title="Contact Me">Book a call</a>
+                </div>
+                <div class="socials">
+                    <div class="sm-icons">
+                        <a class="sm-icon" href="#"><img src="imgs/collaborate/github.svg" alt="GitHub"></a>
+                        <a class="sm-icon" href="#"><img src="imgs/collaborate/mage_behance.svg" alt="Behance"></a>
+                        <a class="sm-icon" href="#"><img src="imgs/collaborate/xcom.svg" alt="X"></a>
+                        <a class="sm-icon" href="#"><img src="imgs/medium.svg" alt="Medium"></a>
+                    </div>
+                    <p>or you can <a href="mailto:bolujxl2@gmail.com" class="email-link">send me an email</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-create">Pixels pushed by Boluwatife</p>
+        <p class="footer-copy">&copy; BoluJxl <span id="year"></span></p>
+    </footer>
+
+    <div class="cursor-dot"></div>
+    <script defer src="script.js"></script>
+</body>
+</html>

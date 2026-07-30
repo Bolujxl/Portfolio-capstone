@@ -1,0 +1,347 @@
+/* 
+   Geminics CSS 
+   Foundational styles derived from case-study.css 
+   Refined for centered layout and under-heading metadata
+*/
+
+/* ---------- Common Components ---------- */
+.ico-arrow {
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cs-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space10);
+    width: fit-content;
+    padding: 0;
+    font-size: var(--font16);
+    letter-spacing: -0.2px;
+    color: var(--text-secondary);
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    border-radius: 0;
+    font-weight: var(--fontMedium);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin-top: var(--space8);
+    padding-bottom: var(--space4);
+}
+
+.dark .cs-cta {
+    color: var(--whiteText90-color);
+    border-color: rgba(255,255,255,0.2);
+}
+
+.cs-cta:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    gap: var(--space14);
+}
+
+.cs-cta .ico-arrow {
+    width: 15px;
+    height: 15px;
+    transition: transform 0.25s ease;
+}
+
+.cs-cta:hover .ico-arrow {
+    transform: translateX(3px);
+}
+
+/* ---------- Geminics Hero ---------- */
+.gm-hero {
+    background-color: var(--lightSection-bg-color);
+    padding: 8rem var(--space16) 4rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.gm-hero-container {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space32);
+    align-items: center;
+}
+
+.gm-hero-title {
+    font-size: var(--font57);
+    line-height: 1.1;
+    color: var(--text-primary);
+    font-weight: var(--fontBold);
+    letter-spacing: -0.03em;
+}
+
+.gm-hero-strapline {
+    font-size: var(--font20);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: var(--space16) auto 0;
+}
+
+.gm-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space48);
+    padding: var(--space32) 0;
+    border-top: 1px solid var(--outline-variant-light);
+    border-bottom: 1px solid var(--outline-variant-light);
+    width: 100%;
+    margin-top: var(--space16);
+}
+
+.gm-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space8);
+    text-align: center;
+}
+
+.gm-meta-label {
+    font-size: var(--font12);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-tertiary);
+    font-weight: var(--fontSemiBold);
+}
+
+.gm-meta-value {
+    font-size: var(--font16);
+    color: var(--text-primary);
+    font-weight: var(--fontMedium);
+}
+
+.gm-hero-visual {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--borderRadius3);
+    overflow: hidden;
+    background-color: var(--surface-dark-40);
+    border: 3px solid rgba(27, 46, 57, 0.56);
+}
+
+.gm-hero-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------- Section Standardized ---------- */
+.cs-section {
+    padding: var(--space80) var(--space16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.cs-section.dark { background-color: var(--secondary-color); }
+.cs-section.light { background-color: var(--lightSection-bg-color); }
+
+.cs-section-container {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space32);
+}
+
+.cs-section-container.wide { max-width: 1000px; }
+
+/* ---------- Section heading ---------- */
+.cs-section-heading h2 {
+    font-size: var(--sectionheadFontSize);
+    font-weight: var(--fontMedium);
+    text-align: center;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    margin-bottom: var(--space4);
+}
+
+.cs-section-heading h2::before {
+    content: "\2022";
+    margin-right: var(--space4);
+    color: var(--accent-color);
+}
+
+.cs-section.dark .cs-section-heading h2 {
+    color: var(--darkSection-heading-color);
+}
+
+.cs-section.light .cs-section-heading h2 {
+    color: var(--lightSection-heading-color);
+}
+
+.cs-section.light .cs-section-heading h2::before {
+    content: none;
+}
+
+/* ---------- Body text ---------- */
+.cs-body {
+    font-size: var(--font18);
+    line-height: 1.8;
+}
+
+.cs-section.light .cs-body { color: var(--lightSection-text-color); }
+.cs-section.dark .cs-body { color: var(--whiteText90-color); }
+
+/* ---------- Insight callout ---------- */
+.cs-insight {
+    border-left: 3px solid var(--accent-color);
+    padding: var(--space16) var(--space24);
+    background-color: rgba(0, 194, 209, 0.06);
+    border-radius: 0 var(--space8) var(--space8) 0;
+    font-size: var(--font18);
+    color: var(--accent-color);
+    font-weight: var(--fontMedium);
+    line-height: 1.6;
+}
+
+/* ---------- Specific Components ---------- */
+.gm-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space24);
+    margin-top: var(--space8);
+}
+
+.gm-step-card {
+    padding: var(--space24);
+    background-color: var(--surface-light-20);
+    border-radius: var(--borderRadius2);
+    border: 1px solid var(--outline-variant-light);
+}
+
+.gm-section.dark .gm-step-card {
+    background-color: rgba(255,255,255,0.03);
+    border-color: rgba(255,255,255,0.08);
+}
+
+.gm-step-card h3 {
+    font-size: var(--font20);
+    margin-bottom: var(--space12);
+    color: var(--text-primary);
+}
+
+.gm-section.dark .gm-step-card h3 { color: var(--whiteText-color); }
+
+.gm-gallery-mosaic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space16);
+    margin-top: var(--space8);
+}
+
+.gm-gallery-item {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--borderRadius2);
+    overflow: hidden;
+    border: 2px solid rgba(27, 46, 57, 0.3);
+}
+
+.gm-gallery-item.wide {
+    grid-column: span 2;
+    aspect-ratio: 16 / 7;
+}
+
+.gm-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gm-solution-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space80);
+    margin-top: var(--space8);
+}
+
+.gm-showcase-item {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space64);
+    align-items: center;
+}
+
+.gm-showcase-item.reverse {
+    grid-template-columns: 1fr 1.2fr;
+}
+
+.gm-showcase-item.reverse .gm-showcase-img { grid-column: 2; }
+.gm-showcase-item.reverse .gm-showcase-text { grid-column: 1; grid-row: 1; }
+
+.gm-showcase-img {
+    border-radius: var(--borderRadius3);
+    overflow: hidden;
+    box-shadow: var(--shadow-3);
+    border: 1px solid var(--outline-variant-light);
+}
+
+.gm-showcase-img img { width: 100%; display: block; }
+
+.gm-showcase-text h3 {
+    font-size: var(--font28);
+    margin-bottom: var(--space16);
+    color: var(--text-primary);
+}
+
+.gm-section.dark .gm-showcase-text h3 { color: var(--whiteText-color); }
+
+/* ---------- Metrics ---------- */
+.gm-metrics-strip {
+    display: flex;
+    justify-content: space-around;
+    padding: var(--space48) 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: var(--space8);
+}
+
+.gm-metric {
+    text-align: center;
+}
+
+.gm-metric-val {
+    display: block;
+    font-size: var(--font45);
+    font-weight: var(--fontBold);
+    color: var(--accent-color);
+}
+
+.gm-metric-lab {
+    font-size: var(--font14);
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.gm-final-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space32);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+    .gm-hero-title { font-size: var(--font45); }
+}
+
+@media (max-width: 768px) {
+    .gm-hero-meta { gap: var(--space24); }
+    .gm-showcase-item, .gm-showcase-item.reverse { grid-template-columns: 1fr; gap: var(--space32); }
+    .gm-showcase-item.reverse .gm-showcase-img { grid-column: 1; }
+    .gm-showcase-item.reverse .gm-showcase-text { grid-column: 1; }
+    .gm-metrics-strip { flex-direction: column; gap: var(--space32); }
+    .gm-hero-visual { aspect-ratio: 4 / 3; }
+    .gm-hero-meta { padding: var(--space32) var(--space16); gap: var(--space32); }
+    .gm-meta-item { min-width: 40%; }
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PillBox — an end-to-end UX case study. A medication tracker designed to help patients stay on top of their meds and connect with providers.">
+    <meta name="author" content="Boluwatife Jakobe">
+    <meta name="robots" content="index, follow">
+
+    <title>PillBox Case Study — Boluwatife</title>
+
+    <meta property="og:title" content="PillBox Case Study — Boluwatife">
+    <meta property="og:description" content="End-to-end UX case study for a medication tracker designed to help patients stay on top of their meds and connect with providers.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://bolujxl.com/imgs/biomimg.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://bolujxl.com/case-study.html">
+
+    <link rel="canonical" href="https://bolujxl.com/case-study.html">
+    <link rel="icon" href="imgs/biomimg.webp" type="image/webp">
+    <link rel="shortcut icon" href="imgs/biomimg.webp" type="image/webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_outward" />
+
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="style-responsive.css">
+    <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="nav-bar" aria-label="Main navigation">
+            <a href="index.html" class="nav-brand" aria-label="Home">
+                <img src="imgs/biomimg.webp" alt="Boluwatife" class="nav-avatar">
+                <span class="nav-status-dot"></span>
+            </a>
+            <ul class="nav-links">
+                 <li><a href="bio.html">bio</a></li>
+                 <li><a href="works.html">my work</a></li>
+                 <li><a href="#contact">reach me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ── Hero ── -->
+        <section class="cs-hero">
+            <div class="cs-hero-container">
+                <h1 class="main-head-light">PillBox &mdash; Medication Tracker App</h1>
+
+                <p class="cs-hero-strapline">Helping patients with chronic conditions stay on top of their meds without the anxiety of double-dosing.</p>
+
+                <div class="cs-meta">
+                    <span class="cs-meta-role">Product Designer, UX Researcher</span>
+                    <span class="cs-meta-sep" aria-hidden="true">&middot;</span>
+                    <span>8 weeks</span>
+                    <span class="cs-meta-sep" aria-hidden="true">&middot;</span>
+                    <span>iOS &amp; Android</span>
+                </div>
+
+                <div class="cs-hero-img">
+                    <img src="imgs/pillbox mockup.webp" alt="PillBox medication tracking app interface" loading="eager">
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Overview ── -->
+        <section class="cs-section dark">
+            <div class="cs-section-container">
+                <div class="cs-section-heading">
+                    <h2>the problem.</h2>
+                </div>
+                <p class="cs-body">
+                    Medication non-adherence affects over 50% of patients with chronic conditions. People forget doses, mix up prescriptions, or stop taking meds when side effects kick in &mdash; and the consequences range from prolonged illness to preventable hospital visits. Most existing apps are either too clinical, too complex, or built for caregivers rather than the patients themselves.
+                </p>
+                <div class="cs-insight">
+                    Patients don&rsquo;t need another complex health tool. They need something that feels less like a chore and more like a companion.
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Research ── -->
+        <section class="cs-section light">
+            <div class="cs-section-container">
+                <div class="cs-section-heading">
+                    <h2>research &amp; discovery.</h2>
+                </div>
+                <p class="cs-body">
+                    I started with a mixed-methods approach: 12 user interviews with patients managing 2+ prescriptions, a competitive audit of 6 medication apps, and a survey with 50+ respondents. Three patterns stood out immediately.
+                </p>
+
+                <div class="cs-steps">
+                    <div class="cs-step">
+                        <div class="cs-step-num">1</div>
+                        <div class="cs-step-content">
+                            <h3>Forgetting isn&rsquo;t the root cause</h3>
+                            <p>Patients remembered to take their meds &mdash; they forgot <em>whether</em> they had already taken them. Double-dosing anxiety was the top concern across every interview.</p>
+                        </div>
+                    </div>
+                    <div class="cs-step">
+                        <div class="cs-step-num">2</div>
+                        <div class="cs-step-content">
+                            <h3>Pill fatigue is real</h3>
+                            <p>Users with 5+ daily prescriptions described feeling overwhelmed by the sheer volume. Visual pill identification and schedule chunking were consistently requested.</p>
+                        </div>
+                    </div>
+                    <div class="cs-step">
+                        <div class="cs-step-num">3</div>
+                        <div class="cs-step-content">
+                            <h3>Connection to providers is broken</h3>
+                            <p>When side effects occurred, patients wanted to reach their doctor &mdash; but the path was always indirect. A built-in feedback loop was a clear opportunity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Design Process ── -->
+        <section class="cs-section dark">
+            <div class="cs-section-container">
+                <div class="cs-section-heading">
+                    <h2>design process.</h2>
+                </div>
+                <p class="cs-body">
+                    With research insights in hand, I moved into wireframing and iterative prototyping. The core challenge was balancing simplicity with the depth needed for medication management. I explored three directions before converging on a card-based dashboard that surfaces the most time-sensitive action first.
+                </p>
+
+                <div class="cs-gallery">
+                    <div class="cs-gallery-row">
+                        <div class="cs-gallery-img">
+                            <img src="imgs/pillbox mockup.webp" alt="PillBox wireframe sketches" loading="lazy">
+                        </div>
+                        <div class="cs-gallery-img">
+                            <img src="imgs/pillbox mockup.webp" alt="PillBox low-fidelity prototype" loading="lazy">
+                        </div>
+                    </div>
+                    <p class="cs-gallery-caption">Early wireframes and low-fidelity prototypes used in the first round of usability testing.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Solution ── -->
+        <section class="cs-section light">
+            <div class="cs-section-container">
+                <div class="cs-section-heading">
+                    <h2>the solution.</h2>
+                </div>
+                <p class="cs-body">
+                    The final design centers on three core screens: a <strong>Today view</strong> that shows only what&rsquo;s relevant right now, a <strong>Pill identity card</strong> with visual recognition so patients can confirm they&rsquo;re taking the right medication, and a <strong>Provider connect</strong> feature that lets patients report side effects directly from the app.
+                </p>
+
+                <div class="cs-gallery">
+                    <div class="cs-gallery-row">
+                        <div class="cs-gallery-img">
+                            <img src="imgs/pillbox mockup.webp" alt="PillBox Today dashboard screen" loading="lazy">
+                        </div>
+                        <div class="cs-gallery-img">
+                            <img src="imgs/pillbox mockup.webp" alt="PillBox medication detail screen" loading="lazy">
+                        </div>
+                        <div class="cs-gallery-img">
+                            <img src="imgs/pillbox mockup.webp" alt="PillBox provider connection screen" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Technical ── -->
+        <section class="cs-section dark">
+            <div class="cs-section-container">
+                <div class="cs-section-heading">
+                    <h2>build &amp; handoff.</h2>
+                </div>
+                <p class="cs-body">
+                    Designed entirely in Figma using auto-layout, components, and variants for a clean developer handoff. The design system includes 30+ reusable components, a defined spacing and color token system, and interaction specs for every state &mdash; default, pressed, loading, empty, and error.
+                </p>
+
+                <div class="cs-tags">
+                    <span class="cs-tag">Figma</span>
+                    <span class="cs-tag">Auto Layout</span>
+                    <span class="cs-tag">Component Variants</span>
+                    <span class="cs-tag">Design Tokens</span>
+                    <span class="cs-tag">Interactive Prototyping</span>
+                    <span class="cs-tag">User Testing</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Results ── -->
+        <section class="cs-section light">
+            <div class="cs-section-container">
+                <div class="cs-section-heading">
+                    <h2>outcome.</h2>
+                </div>
+
+                <div class="cs-metrics">
+                    <div class="cs-metric">
+                        <div class="cs-metric-value">94%</div>
+                        <div class="cs-metric-label">Task completion rate in usability tests</div>
+                    </div>
+                    <div class="cs-metric">
+                        <div class="cs-metric-value">4.8s</div>
+                        <div class="cs-metric-label">Average time to log a dose</div>
+                    </div>
+                    <div class="cs-metric">
+                        <div class="cs-metric-value">8/10</div>
+                        <div class="cs-metric-label">SUS score from testing cohort</div>
+                    </div>
+                </div>
+
+                <p class="cs-body" style="text-align:center; margin-top: var(--space24);">
+                    The case study was published on Behance and received over <strong>1,200 views</strong> in the first month, with interest from two health-tech startups.
+                </p>
+
+                <div style="display:flex; justify-content:center; margin-top: var(--space16);">
+                    <a href="https://www.behance.net/gallery/179838149/Pillbox-Mobile-App-Design-Case-Study" class="cs-cta" target="_blank" rel="noopener noreferrer">
+                        View full case study
+                        <svg class="ico-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="7" y1="17" x2="17" y2="7"/>
+                            <polyline points="7 7 17 7 17 17"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Navigation ── -->
+        <nav class="cs-next">
+            <div class="cs-next-container">
+                <a href="works.html" class="cs-next-link">
+                    <svg class="ico-arrow ico-arrow--back" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="19" y1="12" x2="5" y2="12"/>
+                        <polyline points="12 19 5 12 12 5"/>
+                    </svg>
+                    Back to all projects
+                </a>
+                <a href="works.html" class="cs-back">All Projects</a>
+                <a href="#" class="cs-next-link">
+                    Next project
+                    <svg class="ico-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12 5 19 12 12 19"/>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+        <!-- ── Contact ── -->
+        <section class="collab" id="contact">
+            <div class="collab-heading">
+                <h2 class="main-head-light">reach out, let&rsquo;s make magic.</h2>
+                <p>A new product or a website? I'd love to hear about it.</p>
+            </div>
+            <div class="collab-socials">
+                <div class="collabtext-btn">
+                    <a href="https://cal.com/bolujxl/30min" class="hero-btn" title="Contact Me" data-cal-link="bolujxl/30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                        Book a call
+                    </a>
+                </div>
+                <div class="socials">
+                    <div class="sm-icons">
+                        <a class="sm-icon" href="https://github.com/Bolujxl" target="_blank" rel="noopener noreferrer" aria-label="Check my code on GitHub"><img src="imgs/collaborate/github.svg" alt="GitHub"></a>
+                        <a class="sm-icon" href="https://www.behance.net/boluJxl" target="_blank" rel="noopener noreferrer" aria-label="View my work on Behance"><img src="imgs/collaborate/mage_behance.svg" alt="Behance"></a>
+                        <a class="sm-icon" href="https://x.com/Bolujxl" target="_blank" rel="noopener noreferrer" aria-label="Follow me on X (Twitter)"><img src="imgs/collaborate/xcom.svg" alt="X"></a>
+                        <a class="sm-icon" href="https://medium.com/@bolulawal99" target="_blank" rel="noopener noreferrer" aria-label="Read my articles on Medium"><img src="imgs/medium.svg" alt="Medium"></a>
+                    </div>
+                    <p>or you can <a href="mailto:bolujxl2@gmail.com" class="email-link">send me an email</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-create">Pixels pushed by Boluwatife</p>
+        <p class="footer-copy">&copy; BoluJxl <span id="year"></span></p>
+    </footer>
+
+    <div class="cursor-dot"></div>
+    <script defer src="script.js"></script>
+    <script defer src="cal.js"></script>
+</body>
+</html>
